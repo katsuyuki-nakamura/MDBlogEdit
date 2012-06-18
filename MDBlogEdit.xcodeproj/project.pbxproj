@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63437FAB1588F03100FD0F91 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63437FAA1588F03100FD0F91 /* MacRuby.framework */; };
+		638AACF2157BA7EA005CCFEA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AACF1157BA7EA005CCFEA /* Cocoa.framework */; };
+		638AACFD157BA7EA005CCFEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 638AACFB157BA7EA005CCFEA /* InfoPlist.strings */; };
+		638AACFF157BA7EA005CCFEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638AACFE157BA7EA005CCFEA /* main.m */; };
+		638AAD04157BA7EA005CCFEA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638AAD02157BA7EA005CCFEA /* MainMenu.xib */; };
+		638AAD07157BA7EA005CCFEA /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 638AAD06157BA7EA005CCFEA /* rb_main.rb */; };
+		638AAD09157BA7EA005CCFEA /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 638AAD08157BA7EA005CCFEA /* AppDelegate.rb */; };
+		638AAD13157BA9BF005CCFEA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AAD12157BA9BF005CCFEA /* WebKit.framework */; };
+		63A7F4031588E56000AF3FDC /* bootstrap.css in Resources */ = {isa = PBXBuildFile; fileRef = 63A7F4021588E56000AF3FDC /* bootstrap.css */; };
+		63A7F4061588E56700AF3FDC /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 63A7F4051588E56700AF3FDC /* markdown.css */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		638AACF6157BA7EA005CCFEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 638AACE4157BA7EA005CCFEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 638AACEC157BA7EA005CCFEA;
+			remoteInfo = MDBlogEdit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63437FAA1588F03100FD0F91 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
+		638AACED157BA7EA005CCFEA /* MDBlogEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDBlogEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		638AACF1157BA7EA005CCFEA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		638AACFA157BA7EA005CCFEA /* MDBlogEdit-Info.plist */ = {isa = PBXFileReference; path = "MDBlogEdit-Info.plist"; sourceTree = "<group>"; };
+		638AACFC157BA7EA005CCFEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		638AACFE157BA7EA005CCFEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		638AAD00157BA7EA005CCFEA /* MDBlogEdit-Prefix.pch */ = {isa = PBXFileReference; path = "MDBlogEdit-Prefix.pch"; sourceTree = "<group>"; };
+		638AAD03157BA7EA005CCFEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		638AAD06157BA7EA005CCFEA /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		638AAD08157BA7EA005CCFEA /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		638AAD12157BA9BF005CCFEA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		63A7F4021588E56000AF3FDC /* bootstrap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = bootstrap.css; sourceTree = "<group>"; };
+		63A7F4051588E56700AF3FDC /* markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = markdown.css; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		638AACEA157BA7EA005CCFEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63437FAB1588F03100FD0F91 /* MacRuby.framework in Frameworks */,
+				638AAD13157BA9BF005CCFEA /* WebKit.framework in Frameworks */,
+				638AACF2157BA7EA005CCFEA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		638AACE2157BA7EA005CCFEA = {
+			isa = PBXGroup;
+			children = (
+				638AACF8157BA7EA005CCFEA /* MDBlogEdit */,
+				638AACF0157BA7EA005CCFEA /* Frameworks */,
+				638AACEE157BA7EA005CCFEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		638AACEE157BA7EA005CCFEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				638AACED157BA7EA005CCFEA /* MDBlogEdit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		638AACF0157BA7EA005CCFEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63437FAA1588F03100FD0F91 /* MacRuby.framework */,
+				638AAD12157BA9BF005CCFEA /* WebKit.framework */,
+				638AACF1157BA7EA005CCFEA /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		638AACF8157BA7EA005CCFEA /* MDBlogEdit */ = {
+			isa = PBXGroup;
+			children = (
+				638AAD08157BA7EA005CCFEA /* AppDelegate.rb */,
+				638AAD01157BA7EA005CCFEA /* Resources */,
+				638AAD05157BA7EA005CCFEA /* Other Sources */,
+				638AACF9157BA7EA005CCFEA /* Supporting Files */,
+			);
+			name = MDBlogEdit;
+			path = MDBlogEdit;
+			sourceTree = "<group>";
+		};
+		638AACF9157BA7EA005CCFEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				638AACFA157BA7EA005CCFEA /* MDBlogEdit-Info.plist */,
+				638AACFB157BA7EA005CCFEA /* InfoPlist.strings */,
+				638AACFE157BA7EA005CCFEA /* main.m */,
+				638AAD00157BA7EA005CCFEA /* MDBlogEdit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		638AAD01157BA7EA005CCFEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63A7F4051588E56700AF3FDC /* markdown.css */,
+				63A7F4021588E56000AF3FDC /* bootstrap.css */,
+				638AAD02157BA7EA005CCFEA /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		638AAD05157BA7EA005CCFEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				638AAD06157BA7EA005CCFEA /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		638AACF5157BA7EA005CCFEA /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed --gem redcarpet --gem coderay";
+			buildConfigurationList = 638AAD0F157BA7EA005CCFEA /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			buildWorkingDirectory = "";
+			dependencies = (
+				638AACF7157BA7EA005CCFEA /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		638AACEC157BA7EA005CCFEA /* MDBlogEdit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 638AAD0C157BA7EA005CCFEA /* Build configuration list for PBXNativeTarget "MDBlogEdit" */;
+			buildPhases = (
+				638AACE9157BA7EA005CCFEA /* Sources */,
+				638AACEA157BA7EA005CCFEA /* Frameworks */,
+				638AACEB157BA7EA005CCFEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MDBlogEdit;
+			productName = MDBlogEdit;
+			productReference = 638AACED157BA7EA005CCFEA /* MDBlogEdit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		638AACE4157BA7EA005CCFEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 638AACE7157BA7EA005CCFEA /* Build configuration list for PBXProject "MDBlogEdit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 638AACE2157BA7EA005CCFEA;
+			productRefGroup = 638AACEE157BA7EA005CCFEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				638AACEC157BA7EA005CCFEA /* MDBlogEdit */,
+				638AACF5157BA7EA005CCFEA /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		638AACEB157BA7EA005CCFEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				638AACFD157BA7EA005CCFEA /* InfoPlist.strings in Resources */,
+				638AAD04157BA7EA005CCFEA /* MainMenu.xib in Resources */,
+				638AAD07157BA7EA005CCFEA /* rb_main.rb in Resources */,
+				638AAD09157BA7EA005CCFEA /* AppDelegate.rb in Resources */,
+				63A7F4031588E56000AF3FDC /* bootstrap.css in Resources */,
+				63A7F4061588E56700AF3FDC /* markdown.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		638AACE9157BA7EA005CCFEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				638AACFF157BA7EA005CCFEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		638AACF7157BA7EA005CCFEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 638AACEC157BA7EA005CCFEA /* MDBlogEdit */;
+			targetProxy = 638AACF6157BA7EA005CCFEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		638AACFB157BA7EA005CCFEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				638AACFC157BA7EA005CCFEA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		638AAD02157BA7EA005CCFEA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				638AAD03157BA7EA005CCFEA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		638AAD0A157BA7EA005CCFEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		638AAD0B157BA7EA005CCFEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		638AAD0D157BA7EA005CCFEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "\"/Library/Frameworks\"";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDBlogEdit/MDBlogEdit-Prefix.pch";
+				INFOPLIST_FILE = "MDBlogEdit/MDBlogEdit-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = MDBlogEdit;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		638AAD0E157BA7EA005CCFEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "\"/Library/Frameworks\"";
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MDBlogEdit/MDBlogEdit-Prefix.pch";
+				INFOPLIST_FILE = "MDBlogEdit/MDBlogEdit-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = MDBlogEdit;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		638AAD10157BA7EA005CCFEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		638AAD11157BA7EA005CCFEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		638AACE7157BA7EA005CCFEA /* Build configuration list for PBXProject "MDBlogEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				638AAD0A157BA7EA005CCFEA /* Debug */,
+				638AAD0B157BA7EA005CCFEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		638AAD0C157BA7EA005CCFEA /* Build configuration list for PBXNativeTarget "MDBlogEdit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				638AAD0D157BA7EA005CCFEA /* Debug */,
+				638AAD0E157BA7EA005CCFEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		638AAD0F157BA7EA005CCFEA /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				638AAD10157BA7EA005CCFEA /* Debug */,
+				638AAD11157BA7EA005CCFEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 638AACE4157BA7EA005CCFEA /* Project object */;
+}
