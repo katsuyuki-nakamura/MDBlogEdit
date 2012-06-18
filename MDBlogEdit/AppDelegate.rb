@@ -76,6 +76,39 @@ class AppDelegate
         end
     end
 
+    def _open_file(path)
+        webview.mainFrame.loadHTMLString("<html><head></head><body></body></html>", baseURL: nil)
+        @filepath = path
+        NSDocumentController.sharedDocumentController.noteNewRecentDocumentURL(NSURL.fileURLWithPath(@filepath));
+        source = File.read(@filepath)
+        textview.setString source
+    end
+
+    def _saveas
+        panel = NSSavePanel.savePanel
+        filetypes = ["md", "mkd", "markdown", "gfm"]
+        panel.setNameFieldStringValue("hoge.md")
+        panel.setAllowedFileTypes(filetypes)
+        panel.setAllowsOtherFileTypes(false)
+        panel.setFloatingPanel(true)
+        panel.setCanChooseDirectories(false)
+        panel.setCanChooseFiles(true)
+        panel.setAllowsMultipleSelection(false)
+        result = panel.runModal
+        if (result == NSOKButton)
+            @filepath = panel.filename
+            NSDocumentController.sharedDocumentController.noteNewRecentDocumentURL(NSURL.fileURLWithPath(@filepath));
+            File.open(@filepath, "w") {|f| f.write textview.textStorage.string}
+        end
+    end
+
+    # delegate
+    def application(theApplication, openFile: filename)
+        _open_file(filename)
+        return true
+    end
+
+    # delegate
     def textStorageDidProcessEditing(notification)
         if (@timer != nil)
             @timer.invalidate
@@ -87,6 +120,7 @@ class AppDelegate
                                                         repeats:false)
     end
 
+    #delegate
     def applicationDidFinishLaunching(a_notification)
         # to handle text input
         textview.textStorage.setDelegate(self);
@@ -98,30 +132,21 @@ class AppDelegate
             textview.setString source
         end
     end
-                                    
+
+    def new(sender)
+        @filepath = nil
+        textview.setString("")
+        webview.mainFrame.loadHTMLString("<html><head></head><body></body></html>", baseURL: nil)
+    end
+
     def open(sender)
         panel = NSOpenPanel.openPanel
         
         result = panel.runModalForDirectory(NSHomeDirectory(),
                                           file: nil,
-                                          types: ["md", "mkd", "markdown"])
+                                          types: ["md", "mkd", "markdown", "gfm"])
         if (result == NSOKButton)
-            webview.mainFrame.loadHTMLString("<html><head></head><body></body></html>", baseURL: nil)
-            @filepath = panel.filename
-            NSDocumentController.sharedDocumentController.noteNewRecentDocumentURL(NSURL.fileURLWithPath(@filepath));
-            source = File.read(@filepath)
-            textview.setString source
-        end
-    end
-
-    def _saveas
-        panel = NSSavePanel.savePanel
-        panel.allowedFileTypes = ["md", "mkd", "markdown"]
-        result = panel.runModal
-        if (result == NSOKButton)
-            @filepath = panel.filename
-            NSDocumentController.sharedDocumentController.noteNewRecentDocumentURL(NSURL.fileURLWithPath(@filepath));
-            File.open(@filepath, "w") {|f| f.write textview.textStorage.string}
+            _open_file(panel.filename)
         end
     end
 

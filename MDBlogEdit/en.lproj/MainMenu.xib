@@ -1419,7 +1419,7 @@
 															<string key="NSFrameSize">{234, 360}</string>
 															<reference key="NSSuperview" ref="961596268"/>
 															<reference key="NSWindow"/>
-															<reference key="NSNextKeyView" ref="1021927958"/>
+															<reference key="NSNextKeyView" ref="155611475"/>
 															<int key="NSViewLayerContentsRedrawPolicy">2</int>
 															<string key="NSReuseIdentifierKey">_NS:13</string>
 															<object class="NSTextContainer" key="NSTextContainer" id="560713073">
@@ -1570,7 +1570,7 @@
 											<string key="NSFrameSize">{237, 361}</string>
 											<reference key="NSSuperview" ref="953558238"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="961596268"/>
+											<reference key="NSNextKeyView" ref="1021927958"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<int key="NSsFlags">133202</int>
 											<reference key="NSVScroller" ref="155611475"/>
@@ -1961,14 +1961,6 @@
 						<reference key="destination" ref="908899353"/>
 					</object>
 					<int key="connectionID">370</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">newDocument:</string>
-						<reference key="source" ref="1014"/>
-						<reference key="destination" ref="705341025"/>
-					</object>
-					<int key="connectionID">373</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -2401,6 +2393,14 @@
 						<reference key="destination" ref="558060260"/>
 					</object>
 					<int key="connectionID">564</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">new:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="705341025"/>
+					</object>
+					<int key="connectionID">565</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -3904,7 +3904,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">564</int>
+			<int key="maxID">565</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3918,6 +3918,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>copyhtml:</string>
 							<string>exporthtml:</string>
+							<string>new:</string>
 							<string>open:</string>
 							<string>save:</string>
 							<string>saveas:</string>
@@ -3925,6 +3926,7 @@
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -3939,6 +3941,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>copyhtml:</string>
 							<string>exporthtml:</string>
+							<string>new:</string>
 							<string>open:</string>
 							<string>save:</string>
 							<string>saveas:</string>
@@ -3952,6 +3955,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">exporthtml:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">new:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

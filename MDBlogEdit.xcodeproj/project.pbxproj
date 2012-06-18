@@ -33,10 +33,10 @@
 		63437FAA1588F03100FD0F91 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		638AACED157BA7EA005CCFEA /* MDBlogEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDBlogEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638AACF1157BA7EA005CCFEA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		638AACFA157BA7EA005CCFEA /* MDBlogEdit-Info.plist */ = {isa = PBXFileReference; path = "MDBlogEdit-Info.plist"; sourceTree = "<group>"; };
+		638AACFA157BA7EA005CCFEA /* MDBlogEdit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDBlogEdit-Info.plist"; sourceTree = "<group>"; };
 		638AACFC157BA7EA005CCFEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		638AACFE157BA7EA005CCFEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		638AAD00157BA7EA005CCFEA /* MDBlogEdit-Prefix.pch */ = {isa = PBXFileReference; path = "MDBlogEdit-Prefix.pch"; sourceTree = "<group>"; };
+		638AAD00157BA7EA005CCFEA /* MDBlogEdit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MDBlogEdit-Prefix.pch"; sourceTree = "<group>"; };
 		638AAD03157BA7EA005CCFEA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		638AAD06157BA7EA005CCFEA /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		638AAD08157BA7EA005CCFEA /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
@@ -94,7 +94,6 @@
 				638AAD05157BA7EA005CCFEA /* Other Sources */,
 				638AACF9157BA7EA005CCFEA /* Supporting Files */,
 			);
-			name = MDBlogEdit;
 			path = MDBlogEdit;
 			sourceTree = "<group>";
 		};
