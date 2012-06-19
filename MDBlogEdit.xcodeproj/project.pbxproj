@@ -15,6 +15,7 @@
 		638AAD07157BA7EA005CCFEA /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 638AAD06157BA7EA005CCFEA /* rb_main.rb */; };
 		638AAD09157BA7EA005CCFEA /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 638AAD08157BA7EA005CCFEA /* AppDelegate.rb */; };
 		638AAD13157BA9BF005CCFEA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AAD12157BA9BF005CCFEA /* WebKit.framework */; };
+		63A26A1A1590D8E100D61096 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 63A26A191590D8E100D61096 /* README.md */; };
 		63A7F4031588E56000AF3FDC /* bootstrap.css in Resources */ = {isa = PBXBuildFile; fileRef = 63A7F4021588E56000AF3FDC /* bootstrap.css */; };
 		63A7F4061588E56700AF3FDC /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 63A7F4051588E56700AF3FDC /* markdown.css */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		638AAD06157BA7EA005CCFEA /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		638AAD08157BA7EA005CCFEA /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		638AAD12157BA9BF005CCFEA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		63A26A191590D8E100D61096 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		63A7F4021588E56000AF3FDC /* bootstrap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = bootstrap.css; sourceTree = "<group>"; };
 		63A7F4051588E56700AF3FDC /* markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = markdown.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 		638AACE2157BA7EA005CCFEA = {
 			isa = PBXGroup;
 			children = (
+				63A26A191590D8E100D61096 /* README.md */,
 				638AACF8157BA7EA005CCFEA /* MDBlogEdit */,
 				638AACF0157BA7EA005CCFEA /* Frameworks */,
 				638AACEE157BA7EA005CCFEA /* Products */,
@@ -201,6 +204,7 @@
 				638AAD09157BA7EA005CCFEA /* AppDelegate.rb in Resources */,
 				63A7F4031588E56000AF3FDC /* bootstrap.css in Resources */,
 				63A7F4061588E56700AF3FDC /* markdown.css in Resources */,
+				63A26A1A1590D8E100D61096 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +254,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -276,6 +281,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -294,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = x86_64;
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -313,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = x86_64;
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
