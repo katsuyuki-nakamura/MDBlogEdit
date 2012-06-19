@@ -10,9 +10,6 @@
 			<key>CFBundleTypeExtensions</key>
 			<array>
 				<string>md</string>
-				<string>mkd</string>
-				<string>markdown</string>
-				<string>gfm</string>
 			</array>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>

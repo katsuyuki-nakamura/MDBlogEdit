@@ -87,11 +87,7 @@ class AppDelegate
     def _saveas
         panel = NSSavePanel.savePanel
         filetypes = ["md", "mkd", "markdown", "gfm"]
-        text = textview.textStorage.string
-        range = text.lineRangeForRange(NSMakeRange(0, 0))
-        filename = text.substringWithRange(range) + ".md"
-        panel.setNameFieldStringValue(filename)
-        panel.setExtensionHidden(false)
+        panel.setNameFieldStringValue("hoge.md")
         panel.setAllowedFileTypes(filetypes)
         panel.setAllowsOtherFileTypes(false)
         panel.setFloatingPanel(true)
