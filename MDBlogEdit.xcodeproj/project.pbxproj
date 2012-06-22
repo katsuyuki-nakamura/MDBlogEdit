@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63437FAB1588F03100FD0F91 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63437FAA1588F03100FD0F91 /* MacRuby.framework */; };
+		6387F56E1594537B0012F939 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 6387F56D1594537B0012F939 /* Credits.html */; };
 		638AACF2157BA7EA005CCFEA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638AACF1157BA7EA005CCFEA /* Cocoa.framework */; };
 		638AACFD157BA7EA005CCFEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 638AACFB157BA7EA005CCFEA /* InfoPlist.strings */; };
 		638AACFF157BA7EA005CCFEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638AACFE157BA7EA005CCFEA /* main.m */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		63437FAA1588F03100FD0F91 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
+		6387F56D1594537B0012F939 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		638AACED157BA7EA005CCFEA /* MDBlogEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDBlogEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638AACF1157BA7EA005CCFEA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		638AACFA157BA7EA005CCFEA /* MDBlogEdit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MDBlogEdit-Info.plist"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				63A7F4051588E56700AF3FDC /* markdown.css */,
 				63A7F4021588E56000AF3FDC /* bootstrap.css */,
 				638AAD02157BA7EA005CCFEA /* MainMenu.xib */,
+				6387F56D1594537B0012F939 /* Credits.html */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				638AAD09157BA7EA005CCFEA /* AppDelegate.rb in Resources */,
 				63A7F4031588E56000AF3FDC /* bootstrap.css in Resources */,
 				63A7F4061588E56700AF3FDC /* markdown.css in Resources */,
+				6387F56E1594537B0012F939 /* Credits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
