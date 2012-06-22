@@ -308,17 +308,9 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="723474917">
-									<reference key="NSMenu" ref="720053764"/>
-									<string key="NSTitle">Copy HTML</string>
-									<string key="NSKeyEquiv"/>
-									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="35465992"/>
-									<reference key="NSMixedImage" ref="502551668"/>
-								</object>
 								<object class="NSMenuItem" id="558060260">
 									<reference key="NSMenu" ref="720053764"/>
-									<string key="NSTitle">Save HTML with header</string>
+									<string key="NSTitle">Export HTML</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
@@ -413,6 +405,15 @@
 									<string key="NSTitle">Copy</string>
 									<string key="NSKeyEquiv">c</string>
 									<int key="NSKeyEquivModMask">1048576</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
+								</object>
+								<object class="NSMenuItem" id="706914472">
+									<reference key="NSMenu" ref="789758025"/>
+									<string key="NSTitle">Copy HTML</string>
+									<string key="NSKeyEquiv">C</string>
+									<int key="NSKeyEquivModMask">1179648</int>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
@@ -1361,7 +1362,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{335, 390}, {480, 360}}</string>
 				<int key="NSWTFlags">1954021376</int>
-				<string key="NSWindowTitle">MDBlogEdit</string>
+				<string key="NSWindowTitle">Untitled</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -2292,6 +2293,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
+						<string key="label">copyhtml:</string>
+						<reference key="source" ref="1014"/>
+						<reference key="destination" ref="706914472"/>
+					</object>
+					<int key="connectionID">645</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
 						<string key="label">addFontTrait:</string>
 						<reference key="source" ref="755631768"/>
 						<reference key="destination" ref="305399458"/>
@@ -2377,14 +2386,6 @@
 						<reference key="destination" ref="117038363"/>
 					</object>
 					<int key="connectionID">559</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">copyhtml:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="723474917"/>
-					</object>
-					<int key="connectionID">562</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -2508,7 +2509,6 @@
 							<reference ref="722745758"/>
 							<reference ref="1010469920"/>
 							<reference ref="192571500"/>
-							<reference ref="723474917"/>
 							<reference ref="558060260"/>
 						</object>
 						<reference key="parent" ref="379814623"/>
@@ -2606,6 +2606,7 @@
 							<reference ref="507821607"/>
 							<reference ref="288088188"/>
 							<reference ref="82994268"/>
+							<reference ref="706914472"/>
 						</object>
 						<reference key="parent" ref="952259628"/>
 					</object>
@@ -3530,14 +3531,14 @@
 						<reference key="parent" ref="720053764"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">561</int>
-						<reference key="object" ref="723474917"/>
-						<reference key="parent" ref="720053764"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">563</int>
 						<reference key="object" ref="558060260"/>
 						<reference key="parent" ref="720053764"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">644</int>
+						<reference key="object" ref="706914472"/>
+						<reference key="parent" ref="789758025"/>
 					</object>
 				</object>
 			</object>
@@ -3698,10 +3699,10 @@
 					<string>549.IBPluginDependency</string>
 					<string>56.IBPluginDependency</string>
 					<string>560.IBPluginDependency</string>
-					<string>561.IBPluginDependency</string>
 					<string>563.IBPluginDependency</string>
 					<string>57.IBPluginDependency</string>
 					<string>58.IBPluginDependency</string>
+					<string>644.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
 					<string>74.IBPluginDependency</string>
@@ -3904,7 +3905,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">565</int>
+			<int key="maxID">645</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

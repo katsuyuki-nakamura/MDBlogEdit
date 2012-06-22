@@ -10,25 +10,13 @@ require 'rubygems'
 require 'redcarpet'
 require 'coderay'
 
-DOC_HEADER =  "<!DOCTYPE html>\n" \
-"<html lang=\"en\">\n" \
-"<head>\n" \
-"<link href=\"markdown.css\" rel=\"stylesheet\">\n" \
-"</head>\n" \
-"<body>\n"
-
-DOC_FOOTER =  "</body>\n" \
-"</html>"
-
 class CustomHTML < Redcarpet::Render::HTML
     def block_code(code, language)
         CodeRay.scan(code, language).div()
     end
 	def doc_header()
-		#DOC_HEADER
 	end
 	def doc_footer()
-		#DOC_FOOTER
 	end
 end
 
@@ -39,6 +27,8 @@ class AppDelegate
     
     @parser
     @thread
+    @lang
+    @css_file
     @html
     @timer = nil
     @locker
@@ -52,14 +42,17 @@ class AppDelegate
                                           :tables => true,
                                           :fenced_code_blocks => true
                                           )
+        @lang = "ja"
+        @css_file = "markdown.css"
+        @css = File.read(NSBundle.mainBundle.bundlePath + "/Contents/Resources/" + @css_file)
     end
 
     def updateWebView(sender)
         @locker.synchronize do
             path = NSBundle.mainBundle.bundlePath + "/Contents/Resources"
             baseURL = NSURL.fileURLWithPath(path)
-            html_full = DOC_HEADER + @html + DOC_FOOTER
-            webview.mainFrame.loadHTMLString(html_full, baseURL: baseURL)
+            html = full_html
+            webview.mainFrame.loadHTMLString(html, baseURL: baseURL)
         end
     end 
 
@@ -82,24 +75,54 @@ class AppDelegate
         NSDocumentController.sharedDocumentController.noteNewRecentDocumentURL(NSURL.fileURLWithPath(@filepath));
         source = File.read(@filepath)
         textview.setString source
+        self.window.setTitle(@filepath)
     end
 
-    def _saveas
+    def _saveas_html(html)
         panel = NSSavePanel.savePanel
-        filetypes = ["md", "mkd", "markdown", "gfm"]
-        panel.setNameFieldStringValue("hoge.md")
+        filetypes = ["html", "htm"]
+        filename = "Untitled.html"
+        if @filepath != nil then
+            filename = File.basename(@filepath, ".*") + ".html"
+        end
+        panel.setNameFieldStringValue(filename)
         panel.setAllowedFileTypes(filetypes)
         panel.setAllowsOtherFileTypes(false)
         panel.setFloatingPanel(true)
         panel.setCanChooseDirectories(false)
         panel.setCanChooseFiles(true)
         panel.setAllowsMultipleSelection(false)
+        panel.setExtensionHidden(false)
+        result = panel.runModal
+        if (result == NSOKButton)
+            File.open(panel.filename, "w") {|f| f.write html}
+        end
+    end
+
+    def _saveas
+        panel = NSSavePanel.savePanel
+        filetypes = ["md", "mkd", "markdown", "gfm"]
+        filename = "Untitled.md"
+        if @filepath != nil then
+            filename = File.basename(@filepath)
+        end
+        puts filename
+
+        panel.setNameFieldStringValue(filename)
+        panel.setAllowedFileTypes(filetypes)
+        panel.setAllowsOtherFileTypes(false)
+        panel.setFloatingPanel(true)
+        panel.setCanChooseDirectories(false)
+        panel.setCanChooseFiles(true)
+        panel.setAllowsMultipleSelection(false)
+        panel.setExtensionHidden(false)
         result = panel.runModal
         if (result == NSOKButton)
             @filepath = panel.filename
             NSDocumentController.sharedDocumentController.noteNewRecentDocumentURL(NSURL.fileURLWithPath(@filepath));
             File.open(@filepath, "w") {|f| f.write textview.textStorage.string}
         end
+        self.window.setTitle(@filepath)
     end
 
     # delegate
@@ -131,12 +154,14 @@ class AppDelegate
             source = File.read(@filepath)
             textview.setString source
         end
+        self.window.setTitle(@filepath)
     end
 
     def new(sender)
         @filepath = nil
         textview.setString("")
         webview.mainFrame.loadHTMLString("<html><head></head><body></body></html>", baseURL: nil)
+        self.window.setTitle("Untitled")
     end
 
     def open(sender)
@@ -169,10 +194,29 @@ class AppDelegate
         pasteBoard.setString(@html, forType: NSStringPboardType)
     end
 
+    def full_html
+        html = <<-EOS
+<!DOCTYPE html>
+<html lang="#{@lang}">
+<head>
+<meta charset="utf-8">
+<style>
+#{@css}
+</style>
+</head>
+<body>
+#{@html}
+</body>
+</html>
+        EOS
+        return html
+    end
+
     def exporthtml(sender)
-        pasteBoard = NSPasteboard.generalPasteboard
-        pasteBoard.declareTypes([NSStringPboardType], owner: nil)
-        pasteBoard.setString(DOC_HEADER + @html + DOC_FOOTER, forType: NSStringPboardType)
+        html = full_html
+        _saveas_html(html)
     end
 end
+
+
 

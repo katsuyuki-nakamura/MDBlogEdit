@@ -1,11 +1,12 @@
 body{
     margin: 0 auto;
-    font-family: Georgia, Palatino, serif;
+    font-family: "メイリオ", "ＭＳ Ｐゴシック", Georgia, Palatino, serif;
     color: #444444;
     line-height: 1;
     max-width: 960px;
     padding: 0 30px 30px;
 }
+
 h1, h2, h3, h4 {
     color: #111111;
     font-weight: 400;
