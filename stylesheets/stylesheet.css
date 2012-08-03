@@ -78,6 +78,8 @@ header h1 {
   line-height: 1;
   margin-bottom: 0.2em;
   width: 540px;
+  position: relative;
+  left: 130px;
 }
 
 header h2 {
@@ -87,6 +89,8 @@ header h2 {
   line-height: 1.3;
   width: 540px;
   letter-spacing: 0;
+  position: relative;
+  left: 130px;
 }
 
 .inner {
@@ -148,6 +152,12 @@ header a.button {
   top: 0;
   background: transparent url(../images/github-button.png) 0 0 no-repeat;
 }
+header div.icon {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
 aside a.button {
   width: 138px;
   padding-left: 64px;
@@ -402,6 +412,11 @@ footer a:hover {
     padding-right: 0;
     margin-left: 0;
   }
+  header div.icon {
+    position: absolute;
+    left: 0px;
+    top:  15px;
+  }
 }
 
 /* All Mobile Sizes (devices and browser) */
@@ -445,6 +460,7 @@ footer a:hover {
     font-size: 13px;
     display: inline;
   }
+
   #main-content,
   aside#sidebar {
     float: none;
